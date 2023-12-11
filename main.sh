@@ -22,7 +22,9 @@ ls > ls.txt
 cp data.txt copy.txt
 
 # Create an alias to print today's date
-alias printdate='date'
+printdate() {
+    date
+}
 
 # Invoke the alias and save the output to "date.txt"
 printdate > date.txt
