@@ -21,17 +21,18 @@ ls > ls.txt
 # Make a copy of the text file into "copy.txt"
 cp data.txt copy.txt
 
-# Define the alias in the script
-echo "alias print_date='date +%Y-%m-%d %H:%M:%S'" >> ~/.bashrc
+# Enable alias expansion in the script
+shopt -s expand_aliases
 
-# Reload the shell to apply the changes
-source ~/.bashrc
+# Define the alias
+alias print_date='date "+%Y-%m-%d %H:%M:%S"'
 
 # Invoke the alias and save the output to date.txt
 print_date > date.txt
 
 # Display a message indicating the completion of the script
 echo "Today's date has been printed and saved to date.txt"
+
 
 # Count the words in the text file and save to "textcount.txt"
 wc -w data.txt > textcount.txt
