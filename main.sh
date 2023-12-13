@@ -22,12 +22,11 @@ ls > ls.txt
 cp data.txt copy.txt
 
 # Create an alias to print today's date
-printdate() {
-    date
-}
+
+alias today='date "+%Y-%m-%d"'
 
 # Invoke the alias and save the output to "date.txt"
-printdate > date.txt
+today > date.txt
 
 # Count the words in the text file and save to "textcount.txt"
 wc -w data.txt > textcount.txt
