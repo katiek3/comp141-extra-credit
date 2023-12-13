@@ -26,8 +26,8 @@ cp data.txt copy.txt
 alias today='date "+%Y-%m-%d"'
 
 # Invoke the alias and save the output to "date.txt"
-today > date.txt 2>&1
 
+today > date.txt
 
 # Count the words in the text file and save to "textcount.txt"
 wc -w data.txt > textcount.txt
